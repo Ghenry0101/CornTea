@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="form.js" defer></script>
+    <title>CornTea</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #f1f1f1;
+      }
+      footer {
+        background-color: red;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      header {
+        position: sticky;
+        z-index: 2;
+        background-color: gold;
+        top: 0px;
+        color: white;
+      }
+      nav {
+        display: flex;
+        padding: 10px;
+        flex-direction: column-reverse;
+        cursor: pointer;
+      }
+      .DogTea {
+        margin-right: 50%;
+      }
+      ul {
+        list-style-type: none;
+      }
+      .nav-link {
+        text-decoration: none;
+        color: white;
+      }
+      .home {
+        background-image: url(Assets/liquid.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        padding: 100px 20px 400px 20px;
+      }
+      .container-home {
+        padding-top: 100px;
+      }
+      .home-h2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 2.5rem;
+      }
+      .home-h3 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .btn-home {
+        background-color: gold;
+        border: none;
+        color: white;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        font-size: 16px;
+        font-weight: bold;
+        margin: auto;
+        cursor: pointer;
+        border-radius: 50px;
+        margin-top: 40px;
+      }
+
+      .btn-home:hover {
+        background-color: white;
+        color: gold;
+      }
+      .menu {
+        margin-top: 10px;
+      }
+      .h2-menu {
+        color: black;
+        font-size: 2.5rem;
+        text-align: center;
+        justify-content: center;
+      }
+      .card {
+        background-color: white;
+        border-radius: 15px;
+      }
+      .card img {
+        border-radius: 15px;
+        height: 500px;
+        object-fit: cover;
+        margin-bottom: 5px;
+      }
+      .rate {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: orange;
+        color: white;
+        padding: 5px 10px;
+        font-size: 17px;
+        font-weight: bold;
+      }
+      .about {
+        margin-bottom: 50px;
+      }
+      .h2-about {
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text-about {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 100px 0 100px;
+      }
+      .h2-layanan {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .DogTea {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav justify-content-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 50px 10px 200px 10px;
+  }
+
+  .home-h2 {
+    font-size: 2rem;
+  }
+
+  .home-h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card img {
+    height: 300px;
+  }
+
+  .text-about {
+    margin: 0 20px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .col-lg-6 {
+    width: 100%;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-home,
+.menu,
+.about,
+.Contact {
+  width: 100%;
+  padding: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav justify-content-center">
+          <h2 class="DogTea">
+            <b style="color: black;">CornTea</b>
+          </h2>
+          <li class="nav-item" >
+            <a class="nav-link" href="#home" style="color: black;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu" style="color: black;">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" style="color: black;">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact" style="color: black;">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="home" class="home">
+      <div class="container-home">
+        <div class="text-home">
+          <h2 class="home-h2">Delicious & Refreshing</h2>
+          <h3 class="home-h3">
+            Hai sobat kuliner! Corndog & Icetea yang nikmat akan menemani
+            aktivitas kalian
+          </h3>
+          <button class="btn-home" href="#menu">Jelajahi!</button>
+        </div>
+      </div>
+    </section>
+    <section id="menu" class="menu">
+      <h2 class="h2-menu">Menu Kami</h2>
+      <div class="row g-4 justify-content-center mb-5">
+        <!-- Card 1 -->
+        <div class="col-md-4 col-sm-7">
+          <div class="card">
+            <span class="rate position-absolute rounded-pill"
+              >4.9 <i class="fa fa-star"></i
+            ></span>
+            <img src="Assets/icetea.jpg" class="card-img-top" alt="Icetea" />
+            <div class="card-body d-flex align-items-center">
+              <h4 class="flex-grow-1" style="color: black">Ice Tea</h4>
+              <h4 class="px-4" style="color: black">10 k</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-7">
+          <div class="card">
+            <span class="rate position-absolute rounded-pill"
+              >4.9 <i class="fa fa-star"></i
+            ></span>
+            <img
+              src="Assets/homemade-corndog-recipe-8.jpg"
+              class="card-img-top"
+              alt="Corndog"
+            />
+            <div class="card-body d-flex align-items-center">
+              <h4 class="flex-grow-1" style="color: black">Corndog</h4>
+              <h4 class="px-4" style="color: black">5 k</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <h2 class="h2-about">About us</h2>
+      <p class="text-about">
+        Kami adalah murid smkn 1 kota bekasi dari jurusan Rekayasa Perangkat
+        Lunak (RPL). Disini kami membuat projek yang dimana projek ini
+        berkolaborasi antara pembelajaran kewirausahaan dengan pembelajaran
+        pengembangan website. Dari pembuatan website ini kalian juga sekaligus
+        bisa memesan produk buatan kami. Yuk pesan!
+      </p>
+    </section>
+    <section id="Contact" class="Contact">
+      <div class="content">
+        <div class="container d-flex justify-content-center mt-5">
+          <div class="col-lg-6">
+            <div class="panel panel-success">
+              <h2 class="fw-bold mt-5 fs-1">Pesan Sekarang!</h2>
+              <div class="panel-body">
+                <form onsubmit="sendMessage()">
+                  <div class="form-group">
+                    <label></label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Nama"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label></label>
+                    <input
+                      type="text"
+                      name="phone"
+                      class="form-control"
+                      placeholder="No. WhatsApp"
+                      id="phone"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label></label>
+                    <select
+                      name="product"
+                      class="form-control"
+                      id="product"
+                      required
+                    >
+                      <option value="">-- Pilih Menu --</option>
+                      <option value="Ice tea">Ice tea</option>
+                      <option value="Corndog">Corndog</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label></label>
+                    <select
+                      name="jumlah_product"
+                      class="form-control"
+                      id="jumlah_product"
+                      required
+                    >
+                      <option value="">-- Pilih Jumlah --</option>
+                      <option value="satu">1</option>
+                      <option value="dua">2</option>
+                      <option value="tiga">3</option>
+                      <option value="empat">4</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label></label>
+                    <textarea
+                      name="description"
+                      class="form-control"
+                      rows="9"
+                      id="pesan"
+                      placeholder="Catatan Tambahan"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-warning send mt-4 mb-3">
+                      Send Form Via WhatsApp
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 Market Day</p>
+    </footer>
+  </body>
+</html>
